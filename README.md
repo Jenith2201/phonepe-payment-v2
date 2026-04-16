@@ -23,16 +23,16 @@ This repository contains a **PhonePe Payment Gateway v2 (OAuth-based) integratio
 ## 🗂️ Project Structure
 
 ```
-phonepe-v2/
+phonepe-payment-v2/
 │
 ├── config.php               # Environment & credential configuration
 ├── phonepe-token.php        # OAuth access token generation
 ├── pay.php                  # Payment form (UI)
 ├── process-pay.php          # Create payment & redirect to PhonePe
-├── check_status.php         # Order status verification
 ├── phonepe-webhook.php      # Webhook handler
 ├── payment-success.php      # Payment success UI
 └── README.md                # Documentation
+
 ```
 
 ---
@@ -160,6 +160,3 @@ For issues:
 - Contact PhonePe Support if required  
 ```
 
----
-
-This block is ready to paste into your GitHub editor — it will render perfectly as a README with headings, lists, and code snippets.
