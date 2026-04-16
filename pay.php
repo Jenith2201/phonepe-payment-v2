@@ -118,7 +118,7 @@
     <h2>Pay with PhonePe</h2>
     <p>Fast • Secure • Trusted</p>
 
-    <form action="process_pay.php" method="POST">
+    <form action="process-pay.php" method="POST">
         <div class="input-group">
             <label>Amount (INR)</label>
             <input type="number" name="amount" min="1" value="100" required>
