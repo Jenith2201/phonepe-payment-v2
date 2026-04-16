@@ -21,8 +21,6 @@ This repository contains a **PhonePe Payment Gateway v2 (OAuth-based) integratio
 ---
 
 ## 🗂️ Project Structure
-
-```
 phonepe-payment-v2/
 │
 ├── config.php               # Environment & credential configuration
@@ -32,7 +30,6 @@ phonepe-payment-v2/
 ├── phonepe-webhook.php      # Webhook handler
 ├── payment-success.php      # Payment success UI
 └── README.md                # Documentation
-
 ```
 
 ---
