@@ -2,10 +2,13 @@
 // NOTHING before this line (no spaces, no echo)
 
 require_once 'phonepe-token.php';
+require_once 'config.php';
 
 $amount = (int)$_POST['amount'] * 100;
 $orderId = uniqid('ORD_');
 $token = getPhonePeAccessToken();
+
+$redirectUrl = APP_BASE_URL . PHONEPE_SUCCESS_PATH . '?orderId=' . $orderId;
 
 $payload = [
     "merchantOrderId" => $orderId,
@@ -13,14 +16,12 @@ $payload = [
     "paymentFlow" => [
         "type" => "PG_CHECKOUT",
         "merchantUrls" => [
-            "redirectUrl" => "http://localhost/phonepe/payment-success.php?orderId=$orderId"
+            "redirectUrl" => $redirectUrl
         ]
     ]
 ];
 
-$url = PHONEPE_BASE_URL . "/checkout/v2/pay";
-
-$ch = curl_init($url);
+$ch = curl_init(PHONEPE_BASE_URL . "/checkout/v2/pay");
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
